@@ -8,11 +8,12 @@ from sklearn.linear_model import LinearRegression
 
 dataset = pd.read_csv('weatherAUS.csv')
 
-independent = dataset.iloc[:, [3, 6, 13, 15, 21, 22]].dropna()
-dependent = dataset.iloc[:, -1]
 
 ind = independent.values.reshape(-1)
 dep = dependent.values.reshape(-1)
+
+independent = dataset.iloc[:, [3, 6, 13, 15, 21, 22]].dropna()
+dependent = dataset.iloc[:, -1]
 
 print(independent)
 
